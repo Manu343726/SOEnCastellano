@@ -22,3 +22,5 @@ Todas las preguntas y respuestas traducidas deberán ser abiertas como [communit
 ## Licencia
 
 Todo el contenido publicado en Stack Exchange se distribuye bajo la licencia [Creative Commons](http://creativecommons.org/licenses/by-sa/3.0/). Para más información, ver [éste hilo](http://meta.stackexchange.com/questions/12527/do-i-have-to-worry-about-copyright-issues-for-code-posted-on-stack-overflow) en Meta Stack Exchange.
+
+**EDIT:** Desde 1 de Febrero de 2016 SE comenzará a licenciar el código contenido en sus QAs como MIT. Más información [aquí](http://meta.stackexchange.com/questions/271080/the-mit-license-clarity-on-using-code-on-stack-overflow-and-stack-exchange?cb=1).
