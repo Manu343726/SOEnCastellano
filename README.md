@@ -17,6 +17,8 @@ Símplemente hay que rellenar las entradas correspondientes a las preguntas trad
 
   *Ésta pregunta ha sido traducida por voluntarios como parte del proyecto [*SOEnCastellano*](https://github.com/Manu343726/SOEnCastellano/) a partir de la pregunta en Stack Overflow [*"Rule-of-Three becomes Rule-of-Five with C++11?"*](http://stackoverflow.com/questions/4782757/rule-of-three-becomes-rule-of-five-with-c11).*
 
+Todas las preguntas y respuestas traducidas deberán ser abiertas como [community wiki](http://meta.stackexchange.com/questions/11740/what-are-community-wiki-posts), ya que el objetivo no es ganar puntos sino colaborar con la comunidad.
+
 ## Licencia
 
 Todo el contenido publicado en Stack Exchange se distribuye bajo la licencia [Creative Commons](http://creativecommons.org/licenses/by-sa/3.0/). Para más información, ver [éste hilo](http://meta.stackexchange.com/questions/12527/do-i-have-to-worry-about-copyright-issues-for-code-posted-on-stack-overflow) en Meta Stack Exchange.
