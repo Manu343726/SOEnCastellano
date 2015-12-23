@@ -8,13 +8,13 @@
 ## Java
 
  **Tag original**: http://stackoverflow.com/questions/tagged/java  
- **Tag en Español**: http://es.stackoverflow.com/questions/tagged/java
+ **Tag en Español**: http://es.stackoverflow.com/questions/tagged/java  
  - **[¿Qué es “NullPointerException” y cómo lo evito?](www.google.es) "Aun no he podido postear la rpegunta": [what is a null pointer exception an  ho  do i fix it?](http://stackoverflow.com/questions/218384/what-is-a-null-pointer-exception-and-how-do-i-fix-it)**
  
 ## Linux
 
-**Tag original**: http://stackoverflow.com/questions/tagged/linux
-**Tag en Español**: http://es.stackoverflow.com/questions/tagged/linux
+**Tag original**: http://stackoverflow.com/questions/tagged/linux  
+**Tag en Español**: http://es.stackoverflow.com/questions/tagged/linux  
 
  -**[Número máximo de hilos por proceso en Linux.](http://es.stackoverflow.com/questions/1686/n%C3%BAmero-m%C3%A1ximo-de-hilos-por-proceso-en-linux?noredirect=1#comment2638_1686): [Maximum number of threads per process in Linux?](http://stackoverflow.com/questions/344203/maximum-number-of-threads-per-process-in-linux)**
 
