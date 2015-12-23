@@ -1,0 +1,261 @@
+**[tag:html5]** es la tecnología central  [lenguaje de marcado][1] de internet  usada para estructurar y presentar contenido para  la  [World Wide Web][2]. A partir del **28 Octubre 2014**  esta es la versión final y completa la quinta revisión del estándar HTML de la [**World Wide Web Consortium**] [3] (W3C).  La versión anterior HTML4 fue estandarizada en  1997.
+El 18 de enero de 2011, el W3C introdujo el a [logo] [4] para [representar] [5] el uso o interés en **HTML5**. A diferencia de otros distintivos emitidos previamente por la W3C este  no implica validez o conformidad con cierto estándar. Desde el 1 de abril este logo es oficial.
+> **Nota: ** *"El termino [tag: html5] es ampliamente usado como una palabra de moda para referirse a las tecnologías Web modernas, muchas de ellas (aunque no todas ni mucho menos) son desarrolladas en el  WHATWG en algunos casos en conjunto con W3C and IETF."* (WHATWG [Is this HTML5?](https://html.spec.whatwg.org/multipage/introduction.html#is-this-html5?))
+
+Comparado con sus predecesores (**HTML 4.1 y XHTML 1.0**) HTML5 introduce nuevos elementos y algunas características JavaScript, incluyendo:
+- < [video] [6]> y < [audio] [7]> elementos para la reproducción multimedia nativa.
+- < [canvas] [8]> elementos para generación de gráficos
+- nuevos tipos de input.
+- nuevos elementos estructurales semánticos como  <[header][9]>, <[footer][10]>, <[nav][11]>, <[section][12]>, and <[article][13]>
+- funcionalidad para arrastrar y soltar
+- APIs de almacenamiento local 
+- aplicaciones web API offline
+- Dispositivos APIs como Camera API, Location API etc.
+- 3D, gráficos y efectos.
+
+
+La  [definición de HTML5 ha sido declarada completa en diciembre de 2012](http://www.w3.org/2012/12/html5-cr.html.en) (junto con Canvas 2D Canvas 2D), y la próxima ronda  de estándares W3C HTML está disponible como el [proyecto HTML5.1] [14]. 
+
+#HTML5  elemento`<video>` #
+
+El elemento `<video>`  especifica video, como un clip de una película o video en streaming.
+Actualmente hay 3 formatos de video compatibles con el elemento `<video>`: [MP4] [26], [WebM] [27], and [Ogg] [25]:
+
+El elemento `<video>` es soportado por Internet Explorer 9+, Firefox, Opera, Chrome, and Safari.
+
+**Nota:** *Internet Explorer 8 y versiones anteriores no soportan el elemento ‘<video>’.*
+
+----
+
+#HTML5  elemento `<audio>` #
+
+El elemento  `<audio>` define sonido como música u otros medios de transmisión de audio.
+Actualmente hay 3 formatos de audio compatibles  con el elemento `<audio>`: [MP3] [23], [WAV] [24], and [Ogg] [25]:
+
+El elemento  `<audio>` es soportado por Internet Explorer 9+, Firefox, Opera, Chrome, and Safari.
+
+**Nota:** *Internet Explorer 8 y versiones anteriores no soportan el elemento ‘<audio>’.*
+
+----
+#HTML5 elemento `<canvas>` #
+El elemento  `<canvas>` es usado para dibujar gráficos, sobre la marcha, vía scripting (normalmente JavaScript).
+El elemento  `<canvas>` es solamente un contenedor para gráficos. Debes usar un script para dibujar los gráficos.
+
+
+Cavas tienes varios métodos para dibujar caminos, cajas, círculos, textos y añadir imágenes.
+Internet Explorer 9+, Firefox, Opera, Chrome, and Safari soportan el elemento `<canvas>`.
+
+**Nota:** *Internet Explorer 8 y versiones anteriores no soportan el elemento ‘<canvas>’.*
+
+----
+
+#HTML5 Nuevos elementos de formulario#
+
+HTML5 tiene los siguientes nuevos elementos de formulario:
+
+- `<datalist>`
+- `<keygen>`
+- `<output>`
+**Nota: ** No todos los navegadores soportan los nuevos elementos de formulario y aunque puedes empezar ya a usarlos si no están soportados se comportaran como campos de texto regulares.
+
+##HTML5  elemento `<datalist>`:##
+El elemento `<datalist>` describe una lista predefinidas de opciones para un elemento `<input>`.
+El elemento `<datalist>` es usa para proveer de un función de “autocompletado” en elementos  `<input>` .Los usuarios podrán ver una lista desplegable de opciones predefinidas a medida que introducen datos.
+ Usa el atributo ‘list’ del elemento  `<input>` para unirlo a un elemento`<datalist>`.
+
+##HTML5  elemento `<keygen>`:##
+El propósito del elemento  `<keygen>` es proporcionar una manera segura de autentificar usuarios.
+El elemento  `<keygen>` especifica un campo generador de claves dentro de un formulario.
+Cuando el formulario es enviado se generan 2 claves una privada y otra publica.
+La clave privada es guardada de manera local y la pública es enviada al servidor. La clave pública puede ser usada para generar un certificado en el cliente para autentificar al usuario en el futuro.
+
+##HTML5 elemento `<output>`:##
+El elemento   `<output>` representa el resultado de un cálculo (como uno realizado por un script).
+
+----
+
+#HTML5 nuevos atributos en formularios#
+
+HTML5 tiene multitud de nuevos atributos para `<form>` y `<input>`.
+
+**Nuevos atributos para `<form>`:**
+
+- autocomplete
+- novalidate
+
+**Nuevos atributos para `<input>`:**
+
+- autocomplete
+- autofocus
+- form
+- formaction
+- formenctype
+- formmethod
+- formnovalidate
+- formtarget
+- height and width
+- list
+- min and max
+- multiple
+- pattern (regexp)
+- placeholder
+- required
+- step
+
+
+##1.  Atributo autocomplete ##
+El atributo autocomplete específica cuando un campo de un formulario o de entrada debe tener autocompletar activada o no (on/off).
+Cuando autocompletar esta activado el navegador completa automáticamente el campo con valores basados en valores introducidos por el usuario antes.
+
+**Consejo:** Es posible tener autcomplete  "on" para el formulario y "off" para campos de entrada específicos, o al revés.
+
+**Nota:** El atributo  autocomplete funciona con <form> y los siguientes tipos de  <input>: text, search, url, tel, email, password, datepickers, range, y color.
+
+##2.  Atributo novalidate ##
+El atributo novalidate es  de tipo booleano.
+Cuando está presente especifica que el dato de entrada no debería ser validado al enviarse.
+
+##3. Atributo autofocus ##
+El atributo autofocus es de tipo booleano.
+Cuando está presente especifica que un elemento `<input>` debe tener el foco automáticamente cuando la pagina carga.
+
+##4. Atributo form ##
+El atributo form específica a los formularios a los que el elemento `<input>`  pertenece. 
+
+**Consejo:** Para hacer referencia a más de un formulario usa una lista de ids de formularios separas por espacios.
+
+##5. Atributo formaction ##
+
+El atributo formaction específica la URL de un archivo que procesa la información enviada por el formulario.
+El atributo formaction anula el atributo action de los elementos `<form>`.
+
+**Nota:** El atributo  formaction puede ser usado con  type="submit"y  type="image".
+
+##6.  Atributo formenctype ##
+El atributo formenctype especifica como la información del funcionario debe ser codifica al enviarse al servidor (solo formularios con method="post").
+El atributo formenctype anula el atributo enctype de los elementos `<form>`.
+
+**Nota:** El atributo formenctype puede ser usado con type="submit" y type="image".
+
+##7.  Atributo formmethod ##
+
+El atributo formmethod nos permite variar el método de envió de información de  formularios.
+El atributo  formmethod anula el atributo método de los elementos`<form>`.
+
+**Nota:** El atributo formmethod puede ser usado con type="submit" y type="image".
+
+##8.  Atributo formnovalidate ##
+El atributo novalidate es de tipo booleano.
+Cuando está presente especifica que los elementos `<input>` no deben ser validados al enviarse.
+El atributo formnovalidate anula el atributo novalidate de los elementos `<form>`,
+
+**Nota:** El atributo  formnovalidate puede ser usado con  type="submit".
+
+##9.  Atributo formtarget ##
+EL atributo formtarget especifica un nombre o palabra clave que indica donde se muestra la respuesta recibida tras enviar el formulario.
+El atributo formtarget anula el atributo target de los elementos `<form>`.
+
+**Nota:** El atributo formtarget puede ser usado con type="submit" y type="image".
+
+##10. Atributos height y width ##
+
+Los atributos height y width especifican el alto y ancho de un elemento `<input>`.
+
+**Nota:** los atributos height y width son solo usados con  `<input type="image">`.
+
+**Consejo: ** Siempre especifica los atributos height y width para las imágenes. 
+Si estos atributos están especificados el espacio requerido para la imagen es reservado cuando la página es cargada. Sin embargo, sin estos atributos el navegar no sabe el tamaño de la imagen y no puede reservar el espacio apropiado lo que hace que el diseño de la página vaya cambiando mientras carga (mientras las imágenes van cargando).
+
+##11.Atributo  list ##
+
+El atributo list hace referencia a un elemento`<datalist>` que contiene opciones predefinidas para un elemento `<input>`.
+
+##12. Atributo min y max ##
+Los atributos min y max especifican el mínimo y máximo valor para un elemento `<input>`.
+
+**Nota:** Los atributos  min y max funcionan con los siguientes tipos de entrada: number, range, date, datetime, datetime-local, month, time y week.
+
+##13. Atributo multiple ##
+El atributo multiple es de tipo booleano.
+Cuando está presente especifica que el usuario tiene permitido escribir más de un valor en el elemento `<input>`.
+
+**Nota:** El atributo multiple funciona con los siguientes tipos de entrada: email y file.
+
+##14. Atributo pattern ##
+El atributo pattern específica una expresión regular que es comparada con el valor del elemento `<input>`.
+
+**Nota:** El atributo pattern funciona con los siguiente tipo de entrada: text, search, url, tel, email y password.
+
+
+##15.  Atributo placeholder ##
+El atributo placeholder específica una pista corta que describe el valor esperado en el campo de entrada. (*Ej. Un valor de ejemplo o una descripción corta del formato esperado*).
+La pista es mostrada en el campo de entrada cuando esta vacio y desaparece cuando el campo tiene el foco.
+
+**Nota:** El atributo  placeholder funciona con los siguientes tipos de entrada: text, search, url, tel, email y  password.
+
+##16. Atributo required ##
+
+El atributo required es de tipo booleano.
+Cuando está presente especifica que el campo de entrada debe ser rellenado antes de que el formulario sea enviado.
+
+**Nota:** El atributo  required funciona con los siguientes tipos de entrada: text, search, url, tel, email, password, date pickers, number, checkbox, radio y  file.
+
+##17.Atributo  step ##
+El atributo step específica los intervalos de números validos para un elemento `<input>`,
+
+**Ejemplo:** Si step="3", los números validos podrían ser -3, 0, 3, 6, etc.
+
+**Consejo:** El atributo step puede ser usado junto con los atributos  max y min para crear un rango de valores validos.
+
+**Nota:** El atributo step funciona con los siguientes tipos de entrada: number, range, date, datetime, datetime-local, month, time y week.
+
+----
+Hay multitud de páginas de introducción a HTML5 [Dive into HTML5](http://diveintohtml5.info/) o [HTML5 Rocks] (http://www.html5rocks.com).  
+
+Cada característica tiene diferentes niveles de soporte según el navegar. [CanIUse.com](http://caniuse.com/) y [HTML5Test](http://html5test.com/) tienen mucha información sobra la compatibilidad entre navegadores.
+HTML5 incluye estándares anteriores por lo tanto es compatible con los contenidos anterior aunque los elementos en desuso están clasificados como obsoletos.
+El [tag: W3c] a sacado las especificaciones para HTML5 [aquí] (http://www.w3.org/TR/html5/).
+
+##Resources
+
+ - [Mozilla MDN][16]
+ - [html5rocks][17]
+ - [HTML5 Introduction][18]
+ - [HTML5 Tags Reference][19]
+ - [HTML5 Wikipedia Article][20]
+ - [W3C HTML5 Documentation](http://www.w3.org/TR/html5/)
+ - [HTML5 Logo FAQ][21]
+
+##Libros
+
+ - [Dive into HTML5][22]
+ - [HTML5 FOR WEB DESIGNERS][28]
+
+
+  [1]: https://es.wikipedia.org/wiki/Lenguaje_de_marcado
+  [2]: https://es.wikipedia.org/wiki/World_Wide_Web
+  [3]: https://es.wikipedia.org/wiki/World_Wide_Web_Consortium
+  [4]: http://www.w3.org/html/logo/downloads/HTML5_Logo.svg
+  [5]: http://www.w3.org/html/logo/faq.html
+  [6]: http://dev.w3.org/html5/html-author/#the-video-element
+  [7]: http://dev.w3.org/html5/html-author/#the-audio-element
+  [8]: http://dev.w3.org/html5/html-author/#canvas
+  [9]: http://dev.w3.org/html5/html-author/#the-header-element
+  [10]: http://dev.w3.org/html5/html-author/#the-footer-element
+  [11]: http://dev.w3.org/html5/html-author/#the-nav-element
+  [12]: http://dev.w3.org/html5/html-author/#the-section-element
+  [13]: http://dev.w3.org/html5/html-author/#the-article-element
+  [14]: http://www.w3.org/html/wg/drafts/html/master/Overview.html
+  [16]: https://developer.mozilla.org/es/docs/HTML/HTML5
+  [17]: http://www.html5rocks.com/es/tutorials/?page=1
+  [18]: http://www.w3schools.com/html/html5_intro.asp
+  [19]: http://www.way2tutorial.com/html/tag/index.php
+  [20]: https://es.wikipedia.org/wiki/Html5
+  [21]: http://www.w3.org/html/logo/faq.html
+  [22]: http://diveintohtml5.info/
+  [23]: https://es.wikipedia.org/wiki/MP3
+  [24]: https://es.wikipedia.org/wiki/WAV
+  [25]: https://es.wikipedia.org/wiki/Ogg
+  [26]: https://es.wikipedia.org/wiki/MPEG-4_Part_14
+  [27]: https://es.wikipedia.org/wiki/WebM
+  [28]: http://abookapart.com/products/html5-for-web-designers
