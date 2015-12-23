@@ -14,4 +14,4 @@
 
 **Tag original**: http://stackoverflow.com/tags/html5/info
 **Tag en Español**:http://es.stackoverflow.com/tags/html5/info
-- ** el sistema de envio de tags los coloca en cola y con el ajetreo de las navidades no sabemos cuando publicaran los cambios hechos , adjuntamos el material traducido y realizado en la carpeta adjunta drafts.
+- El sistema de envio de tags los coloca en cola y con el ajetreo de las navidades no sabemos cuando publicaran los cambios hechos , adjuntamos el material traducido y realizado en la carpeta adjunta drafts.
