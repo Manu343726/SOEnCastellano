@@ -1,0 +1,202 @@
+Hoja de estilo en cascada o CSS (siglas en inglés de *cascading style sheets*) es un lenguaje usado para definir y crear la presentación de un documento estructurado escrito en HTML o XML2 (y por extensión en XHTML).
+
+La presentación visual del HTML estaba originalmente definida en los atributos HTML pero HTML4 dejo estos atributos obsoletos y CSS fue introducido para separar el control de la presentación visual del contenido.
+
+Un documento CSS básico esta hecho de conjuntos de reglas. Cada conjunto de reglas empieza con un [**selector**](http://www.w3.org/TR/css3-selectors/), que hace de nexo de unión entre el documento **HTML** o**XML** y el CSS , seguido por un bloque de cero o mas propiedades que definen la presentación . Ejemplo :
+
+<!-- language: lang-css -->
+
+    /* Esto es un comentario*/ 
+
+    a {                             /* Selecciona todos los elementos <a> (HTML links), */
+        color: orange;              /* cambia su color a naranja, */
+        background-color: pink;     /* cambia el color de fondo a rosa, */
+        text-decoration: none;      /* y remueve el subrayado. */
+    }
+
+    a:hover {                       /* Selecciona todos los elementos <a> que tienen el puntero encima*/
+        color: red;                 /* cambia su color a rojo */
+        text-decoration: underline; /* y los subraya de nuevo */
+    }
+
+El simple ejemplo de arriba también ilustra el estilo cascada de los elementos CSS. Cuando colocas el puntero sobre un link (ej., un elemento `<a>`) en [una página HTML con esta hoja de estilos aplicada](http://www.htmldog.com/guides/cssbeginner/applyingcss/) las 2 reglas se aplican ; por la primera regla el color del fondo se vuelve rosa pero como el selector `a:hover` es mas especifico sus propiedades  `color` y `text-decoration` anulan las de el conjunto de reglas de `<a>`.
+
+El [orden de la cascada](http://www.w3.org/TR/CSS2/cascade.html#cascade) define como la [especificidad ](http://www.stuffandnonsense.co.uk/archives/css_specificity_wars.html) y otros factores determinan que valor de una propiedades se aplica a un elemento.
+
+Algo más de CSS , continuando desde el ejemplo anterior :
+
+
+<!-- language: lang-css -->
+
+    /* Selectores con mayor especificidad anulan a otros con menos */
+    #article a.tag {
+        color: #F00;
+    }
+
+    /* Selectores complejos pueden ser creados uniendo varios simples */
+    #sidebar > h3 + p a:first-child {
+        border-bottom: 1px solid #333;
+        font-style: italic;
+    }
+
+    /* También es posible dar estilo a elementos dependiendo de un atributo  */
+    div[id] a[target="_blank"] {
+        color: white;
+    }
+
+    /* también pueden anular estilos heredadas usando la palabra clave important */
+    div.nested {
+        color: orange !important;
+    }
+
+## Precedencia de los selectores
+
+Cada componente de un un selector CSS puede estar basado en uno de tres posibles atributos de un elemento HTML
+
+1. El elemento ID (del atributo `id`)
+2. El nombre de una clase del elemento (en el atributo `class`)
+3. La etiqueta del elemento
+
+Selectores que usan ID tienen mayor prioridad que los que usan nombres de clase y los selectores que usan nombres de clases tienen a su vez mayor prioridad que los que usan etiquetas. `!important` puede ser usar para anular la precedencia de los selectores , sin embargo siempre que sea posible se debe usar mayor especificidad en vez de `!important` para prevenir anulaciones en otros estilos que ser necesario añadir.
+
+Por ejemplo:
+
+<!-- begin snippet: css hide: false -->
+
+<!-- language: lang-html -->
+
+    <!—Crea un autor con clase class1 y ID anchor1 -->
+    <a class="class1" id="anchor1">Sample</a>
+
+<!-- language: lang-css -->
+
+    a {                 /* elemento ancla */
+        color: orange;
+    }
+
+    .class1 {           /* cualquier elemento con clase class1 */
+        color: red;
+    }    
+
+    #anchor1 {          /* element con id  anchor1 */
+        color: green;
+    }
+
+<!-- end snippet -->
+
+En el ejemplo de arriba el color del string “Sample” será verde.
+
+Repetidas apariciones del mismo selector también incrementan su especificidad , como está escrito
+[Selectors Level 3 W3C Recomendation](http://www.w3.org/TR/css3-selectors/#specificity).
+
+<!-- language: lang-css -->
+
+    .class1.class1 {    /* selector de clase repetido */
+        font-weight: bold;
+    }
+
+    .class1 {
+        font-weight: normal;
+    }
+
+En el ejemplo de arriba la fuente será bold.
+
+### Aviso importante:
+
+Existen editores online como [jsbin][8]  o [jsfiddle][9]  en los que se pueden hacer pruebas y compartir las pruebas de código lo que ayuda mucho a la hora de realizar preguntas referentes a CSS
+
+---
+
+### References
+  
+ * [Wikipedia Reference](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+ * [W3C CSS2.1 Specification](http://www.w3.org/TR/CSS2/)
+ * [W3C CSS3 Selectors Specification](http://www.w3.org/TR/css3-selectors/)
+ * [W3C CSS3 Media Queries Specification](http://www.w3.org/TR/css3-mediaqueries/)
+ * [W3C Cascading Style Sheets home page](http://www.w3.org/Style/CSS/)
+ * [Way2Tutorial CSS Tutorial](http://way2tutorial.com/css/tutorial.php)
+ * [SitePoint CSS Reference](http://reference.sitepoint.com/css)
+ * [HTML Dog: HTML and CSS Tutorials](http://htmldog.com/)
+ * [Cascading Style Sheets on the Web Standards Curriculum](https://dev.opera.com/articles/view/27-css-basics/)
+ * [The 30 CSS Selectors you Must Memorize](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/)
+ * [W3C Web Content Accessibility Guidelines](http://www.w3.org/TR/WCAG20/)
+ * [DocHub Instant Documentation Search](http://dochub.io/#css/)
+ * [DevDocs - Documentation Searching Service](http://devdocs.io/css/)
+ * [W3Schools CSS Tutorials][2]
+ * [Learn CSS Layouts](http://learnlayout.com)
+ * [Demonstration of all combination of css selectors by w3schools](http://www.w3schools.com/cssref/trysel.asp)
+ * [CSS-Tricks Almanac - A list of all css selectors with example and explanation][3]
+
+
+### Video Tutorial
+* [CodeSchool CSS Screencast][4] - Learn the fundamentals & foundational elements of CSS with CSS Cross-Country
+
+### CSS Pseudo Selector
+
+ * [CSS Pseudo Class Selector](http://way2tutorial.com/css/css_pseudo_class_selector.php)
+ * [Pseudo Element][5]
+
+### Validacion
+
+ * [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/)
+ * [CSS Lint](http://csslint.net/)
+ * [CSS Portal](http://www.cssportal.com/css-validator/)
+
+### Soporte navegadores
+
+ * [MDN: Mozilla CSS support chart](https://developer.mozilla.org/en/Mozilla_CSS_support_chart)
+ * [MSDN: CSS Compatibility and Internet Explorer](https://msdn.microsoft.com/en-us/library/cc351024%28v=vs.85%29.aspx)
+ * [Opera web specification support pages](http://www.opera.com/docs/specs/presto29/#opsupport)
+ * [Konqueror CSS support](https://konqueror.org/css/)
+ * [QuirksMode CSS](http://www.quirksmode.org/css/contents.html)
+ * [When can I use... Compatibility tables for CSS3 and more](http://caniuse.com/)
+ * [CSS3 Selectors Test](http://www.css3.info/selectors-test/)
+ * [Wikipedia: Comparison of layout engines](https://en.wikipedia.org/wiki/Comparison_of_layout_engines_\(Cascading_Style_Sheets\))
+
+### CSS Pre-procesadores
+
+ * [LessCSS](http://lesscss.org)
+ * [SASS](http://sass-lang.com)
+ * [Stylus](https://learnboost.github.io/stylus/)
+ * [Examples](http://csspre.com)
+
+### Hojas de estilos reseteadas
+
+ * [Eric Meyer's reset.css](http://meyerweb.com/eric/tools/css/reset/)
+ * [HTML5 Reset Stylesheet](http://html5doctor.com/html-5-reset-stylesheet/)
+ * [CSS Wizardry Reset restarted](http://csswizardry.com/2011/10/reset-restarted/)
+ * [Normalize.css](https://necolas.github.io/normalize.css/)
+
+### CSS Frameworks
+
+ * [Blueprint](http://blueprintcss.org/) 
+ * [960 CSS Framework](http://960.gs/) 
+ * [jQuery UI CSS Framework](https://api.jqueryui.com/theming/css-framework/#The_jQuery_UI_CSS_Framework)
+ * [YAML](http://www.yaml.de/en/) 
+ * [YUI CSS Grids](http://yuilibrary.com/) 
+ * [Twitter Bootstrap](https://getbootstrap.com/)
+ * [HTML5 ★ BOILERPLATE](https://html5boilerplate.com/) 
+ * [Zurb's Foundation](http://foundation.zurb.com/) 
+ * [Skeleton](http://getskeleton.com/) 
+ * [inuit.css](http://inuitcss.com/)
+ * [Jeet Grid System][6] 
+ * [Gumby][7] 
+ * [Metro UI CSS][7] 
+
+### Version actual
+
+* [CSS3](https://es.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3) (CSS3 es el ultimo estandar CSS)
+
+
+ * [HTML / CSS / DOM & web design](https://chat.stackoverflow.com/rooms/29074/html-css-dom-web-design)
+
+
+  [1]: https://blog.stackoverflow.com/2014/09/introducing-runnable-javascript-css-and-html-code-snippets/
+  [2]: http://www.w3schools.com/css/default.asp "w3schools CSS Tutorials"
+  [3]: https://css-tricks.com/almanac/
+  [4]: https://www.codeschool.com/courses/css-cross-country
+  [5]: http://www.w3schools.com/css/css_pseudo_elements.asp
+  [6]: http://jeet.gs/
+  [7]: http://www.gumbyframework.com/
+  [8]: https://jsbin.com/?html,output
+  [9]: https://jsfiddle.net/
